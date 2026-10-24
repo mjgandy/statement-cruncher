@@ -7,11 +7,18 @@ authors = [
     { name = "Michael Gandy", email = "168826846+mjgandy@users.noreply.github.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "rich>=15.0.0",
+]
 
 [project.scripts]
-statement-cruncher = "statement_cruncher:main"
+statement-cruncher = "statement_cruncher.main:main"
 
 [build-system]
 requires = ["uv_build>=0.12.5,<0.13.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.16.9",
+]

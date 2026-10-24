@@ -1,0 +1,9 @@
+services:
+  statement-cruncher:
+    build: .
+    container_name: statement-cruncher
+    command: python -m src/statement_cruncher/main.py
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./statements:/data
